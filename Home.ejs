@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>TECH UNIVERSE</title>
+    <style>
+        body{
+            margin: 0;
+            align-items: center;
+           background-color: #cbcaca;
+        }
+        .imagem{
+            position: absolute;
+            top: 23%;
+            left: 35%;
+        }
+        .titulo{
+            position: absolute;
+            top: 25%;
+            left: 39%;
+        }
+        .nav{
+
+            height: 100px;
+            background-color: #333333;
+            color: #263cb4;
+            padding-top: 0.5%;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: Arial;
+            width: 100%;
+            margin: auto;
+            position:relative;
+            z-index: 2;
+
+        }
+        .rodape{
+            background-color: #363636;
+            padding-bottom: 2%;
+            z-index: 1;
+        }
+        .principal{
+            padding-top: 5%;
+            width: 100%;
+            margin: 10px auto;
+            position: relative;
+            z-index: 1;
+            background: #cbcaca;
+            height: 2500px;
+
+
+        }
+        #menu ul {
+            margin: 0px;
+            background-color:black;
+            list-style:none;
+            float: left;
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            padding: 0px;
+        }
+        #menu ul li { display: inline;
+            z-index: 3;}
+
+        #menu ul li a {
+            padding: 0.5% 9.425%;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border-bottom:3px solid #1c73af;
+            text-align: center;
+            font-family: Arial;
+            z-index: 3;
+        }
+
+        #menu ul li a:hover {
+            background-color:white;
+            color: #262626;
+            border-bottom:3px solid #1c73af;
+
+            cursor: pointer;
+            -o-transition:.7s;
+            -ms-transition:.7s;
+            -moz-transition:.7s;
+            -webkit-transition:.7s;
+            transition:.7s;
+
+        }
+
+        .banner{
+            cursor: auto;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 1920px;
+            margin-left: -960px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="banner">
+    <img src="images/asasd.png" border="0">
+</div>
+
+<div class="nav" align="center">
+    <br>
+    <img class="imagem" width="50px" src="http://techacksinc.in/wp-content/uploads/2016/05/cpu.png">
+    <div class="titulo">
+
+        <span id="mudacor">TECH UNIVERSE<br></span>
+
+    </div>
+
+</div>
+
+<form>
+    <nav id="menu">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/novo">NOVO POST</a></li>
+            <li><a href="/cadastro">LOGIN</a></li>
+            <li><a href="/contato">FALE CONOSCO</a></li>
+        </ul>
+    </nav>
+</form>
+</div>
+<div align="center" class="principal">
+    <div style="border: 2px; border-color: #1c73af; width: 500px; height: 400px">
+        <img src="http://isuba1-a.akamaihd.net/produtos/01/00/item/124506/4/124506450G1.jpg">
+        <h2 style="background-color: #363636">Post Teste</h2>
+    </div>
+
+    <%for (var i=0 ; i < posts.length; i++){%>
+    <%=posts[i].imagem%>
+    <%=posts[i].Titulo%>
+    <%}%>
+</div>
+
+<div class="rodape">
+    dsadsa
+</div>
+<script type="text/javascript">
+    var x;
+    var muda = document.getElementById("mudacor");
+
+    var x = 1;
+    function change() {
+
+        var bg = document.getElementById("mudacor");
+
+
+
+        if (x == 1) {
+            bg.style.color = "#6694ff";
+            x = x + 1;
+        }
+        else if (x == 2) {
+            bg.style.color = "#263cb4";
+            x = x + 1;
+        }else {
+            bg.style.color = "white";
+            x = 1;
+        }
+    }
+    setInterval(change, 500);
+</script>
+</body>
+</html>
